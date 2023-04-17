@@ -1,19 +1,12 @@
 import './App.css';
+import { useState } from "react";
 
-const [firstCity, second] = [
-  "Tokyo",
-  "Chicago",
-  "London",
-  ];
-
-  console.log(firstCity);
-  console.log(second);
-
-
-function App(props) {
+function App({ library }) {
+  const [what] = useState("happy");
+  console.log(what);
   return (
     <div className="App">
-      <h1>Hello, {props.library} is here, baby!</h1>
+      <h1>Hello, {library} is here, baby!</h1>
     </div>
   );
 }
