@@ -1,8 +1,14 @@
 import './App.css';
 
-const cities = ["Tokyo", "Chicago", "London"];
+const [firstCity, second] = [
+  "Tokyo",
+  "Chicago",
+  "London",
+  ];
 
-console.log(cities[0,1]);
+  console.log(firstCity);
+  console.log(second);
+
 
 function App(props) {
   return (
