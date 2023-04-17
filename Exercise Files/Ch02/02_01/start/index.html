@@ -24,19 +24,28 @@
         </header>
       );
      }
-     function Main() {
+     function Main(props) {
       return (
         <section>
-          <p> We serve the most delicious food around
+          <p> We serve the most {props.adjective} food around
             </p>
           </section>
+      )
+     }
+     function Footer(props) {
+      return (
+        <footer>
+          <p> Copyright {props.year}
+            </p>
+          </footer>
       )
      }
      function App() {
       return (
         <div>
           <Header name="Vasilij"/>
-          <Main />
+          <Main adjective="popular"/>
+          <Footer year={new Date().getFullYear()} />
           </div>
       )
      }
