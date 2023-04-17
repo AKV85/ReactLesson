@@ -15,22 +15,28 @@
     <title>React ⚛️</title>
   </head>
   <body>
-    <h1>Getting Started with React</h1>
     <div id="root"></div>
     <script type="text/babel">
-      let fire = "🔥";
-      let babyMilk = "🍼";
-      let swords = "⚔️";
-      let name = "React";
-
+     function Header() {
+      return (
+      <header>
+        <h1>Eve's Kitchen</h1>
+        </header>
+      );
+     }
+     function Main() {
+      return (
+        <section>
+          <p> We serve the most delicious food around
+            </p>
+          </section>
+      )
+     }
     ReactDOM.render(
-      <ul>
-        <li>{fire}</li>
-        <li>{babyMilk}</li>
-        <li>{swords}</li>
-        <li>{name.toUpperCase()}</li>
-        <li>{name.length}</li>
-      </ul>,
+      <div>
+    <Header />
+    <Main />
+    </div>,
       document.getElementById("root")
     );
     </script>
