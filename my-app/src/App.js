@@ -8,7 +8,10 @@ function App() {
     <div className="App">
       <h1>Current emotion is {emotion}</h1>
       <button
-        onClick={() => setEmotion("sad")} >
+        onClick={() => setEmotion("sad")} > Sad
+      </button>
+      <button
+        onClick={() => setEmotion("bored")} > Bored
       </button>
     </div>
   );
