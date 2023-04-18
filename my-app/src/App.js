@@ -1,8 +1,12 @@
 import './App.css';
+import {Link} from "react-router-dom";
 
   function Home() {
     return (
       <div>
+       <nav>
+          <Link to="/about">About</Link>
+       </nav>
         <h1>My website</h1>
       </div>
     );
