@@ -8,7 +8,7 @@ import './App.css';
     );
   }
 
-  function About() {
+  export function About() {
     return (
       <div>
         <h1>About us</h1>
@@ -16,7 +16,7 @@ import './App.css';
     );
   }
 
-  function Contact() {
+  export function Contact() {
     return (
       <div>
         <h1>Contact us</h1>
@@ -24,8 +24,6 @@ import './App.css';
     );
   }
 
-  function App() {
+  export function App() {
    return <Home />;
   }
-
-export default App;
