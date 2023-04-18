@@ -1,48 +1,56 @@
 import './App.css';
-import {Link} from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-  function Home() {
-    return (
-      <div>
-       <nav>
-          <Link to="/about">About</Link>
-          <br></br>
-          <Link to="/contact">Contact</Link>
-       </nav>
-        <h1>My website</h1>
-      </div>
-    );
-  }
+function Home() {
+  return (
+    <div>
+      <nav>
+        <Link to="/about">About</Link>
+        <br></br>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <h1>My website</h1>
+    </div>
+  );
+}
 
-  export function About() {
-    return (
-      <div>
-        <nav>
+export function About() {
+  return (
+    <div>
+      <nav>
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <br></br>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <h1>About Us</h1>
+      <Outlet />
+    </div>
+  );
+}
 
-          <Link to="/about">About</Link>
-          <br></br>
-          <Link to="/contact">Contact</Link>
-        </nav> 
-        <h1>About Us</h1>     
-      </div>
-    );
-  }
+export function History() {
+  return (
+    <div>
+      <h1>Our History</h1>
+    </div>
+  );
+}
 
-  export function Contact() {
-    return (
-      <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <br></br>
-          <Link to="/contact">Contact</Link>
-        </nav>  
-        <h1>Contact us</h1>     
-      </div>
-    );
-  }
+export function Contact() {
+  return (
+    <div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <br></br>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <h1>Contact us</h1>
+    </div>
+  );
+}
 
-  export function App() {
-   return <Home />;
-  }
+export function App() {
+  return <Home />;
+}
