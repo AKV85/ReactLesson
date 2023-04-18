@@ -6,6 +6,8 @@ import {Link} from "react-router-dom";
       <div>
        <nav>
           <Link to="/about">About</Link>
+          <br></br>
+          <Link to="/contact">Contact</Link>
        </nav>
         <h1>My website</h1>
       </div>
@@ -15,7 +17,14 @@ import {Link} from "react-router-dom";
   export function About() {
     return (
       <div>
-        <h1>About us</h1>
+        <nav>
+        <Link to="/">Home</Link>
+
+          <Link to="/about">About</Link>
+          <br></br>
+          <Link to="/contact">Contact</Link>
+        </nav> 
+        <h1>About Us</h1>     
       </div>
     );
   }
@@ -23,7 +32,13 @@ import {Link} from "react-router-dom";
   export function Contact() {
     return (
       <div>
-        <h1>Contact us</h1>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <br></br>
+          <Link to="/contact">Contact</Link>
+        </nav>  
+        <h1>Contact us</h1>     
       </div>
     );
   }
