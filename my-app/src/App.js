@@ -1,7 +1,17 @@
 import './App.css';
 import { useState, useEffect} from "react";
 
-
+function GithubUser({ login, type, avatar }) {
+return(
+  <div>
+    <h1>
+      {login}
+    </h1>
+    <p>{type}</p>
+    <img src={avatar} alt="logo" height={150} />
+  </div>
+)
+}
 
 function App() {
   const [data, setData] = useState(null);
@@ -14,9 +24,11 @@ function App() {
   }, []);
   if(data)
    return (
-   <pre>
-      {JSON.stringify(data, null, 2)}
-  </pre>
+   <GithubUser 
+      login={data.login} 
+      type={data.type}
+      avatar={data.avatar_url} 
+  />
    );
   return <h1>Data</h1>;
 }
