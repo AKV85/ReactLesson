@@ -51,10 +51,12 @@ function App() {
 
    return (
    <div>
-      {data.allLifts.map((lift) => (
-        <Lift name={lift.name} 
-              elevationGain={lift.elevationGain} 
-              status={lift.status} />
+      {data.data.allLifts.map((lift) => (
+        <Lift 
+            name={lift.name} 
+            elevationGain={lift.elevationGain} 
+            status={lift.status} 
+        />
       ))}
    </div>
    );
